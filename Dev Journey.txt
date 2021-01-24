@@ -1,0 +1,53 @@
+Day 1: 22 Jan 2021 (4.30 hours)
+- 19:21: Reply VNG's recruiter, decide took the test now to respect the recruiter.
+- To do: 
+	+ Research the given asset.
+	+ Find the idea for the game. Start with the idea blink ability like tracer of Overwatch.
+- 22:00: Finish first player movement controller setup the scene start move around and testing the feeling.
+- Outcome: Not feeling well, the mesh collider not good.
+- Another idea popped out, let add some constraints to the idea and start with one single mechanic: RUNNING.
+Day II: 23 Jan 2021 (11 hours)
+- 1:00: Finish player and infinite running level and go to bed.
+- 8:00: Start working with a coffee.
+- 12:00: Finish Enemy controller, enemy behavior, and navigation.
+- 14:00: Brainstorm more ideas and create to do list cause it’s a bit messy here need a list to focus on.
+- Outcome:
+	- Camera focus nearest enemy.
+- Cho nguoi choi di chuyen trai phai .
+- Hieu ung no khi bi ban cua zombie.
+- Mechanic sung luc: shoot, reload, fire rate.
+- Co che tinh diem khi thang thua.
+- Hieu ung khi chet => animation death cua player va kill cua zombie.
+- UI/UX hoan thanh cycle play infinity.
+- 18:00: Update the list:
+	- Camera focus nearest enemy.
+- Cho nguoi choi di chuyen trai phai <= Remove, cause camera focus is enough.
+- Hieu ung no khi bi ban cua zombie.
+- Mechanic sung luc: shoot, reload, fire rate.
+- Co che tinh diem khi thang thua.
+- Hieu ung khi chet => animation death cua player va kill cua zombie.
+- UI/UX hoan thanh cycle play infinity.
+Day III: 24 Jan 2021 (13 hours)
+- 8:00: Start with a coffee but the coffee machine was off then…(sad).
+- 10:00: Finish UI setup game object and texture.
+- 12:00: Finish intro cut scene.
+- 14:00: Finish death cut scene.
+- 15:00: Update the list
+- Camera focus nearest enemy.
+- Cho nguoi choi di chuyen trai phai <= Remove, cause camera focus is enough.
+- Hieu ung no khi bi ban cua zombie.
+- Mechanic sung luc: shoot, reload, fire rate.
+- Co che tinh diem khi thang thua. <= Remove, cause we don’t need it now.
+- Hieu ung khi chet => animation death cua player va kill cua zombie.
+- UI/UX hoan thanh cycle play infinity.
+New to do list:
+	- Play test.
+	- Performance test.
+	- Test on device.
+	- Optimizing, testing, fix bug.
+	- Clean up and refactor.
+	- Upload Git Hub.
+	- Build on IOS and Android
+
+Day IV: 25 Jan 2012
+- 12:33: Finish testing and upload to git hub.
