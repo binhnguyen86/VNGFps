@@ -64,9 +64,9 @@ namespace Core
             System.Action callback = null)
         {
 #if !SPINE
-            _bgImage
-                .DOFade(1, 0)
-                .Play();
+            //_bgImage
+            //    .DOFade(1, 0)
+            //    .Play();
             if (_lastValueProgressValue < value)
             {
                 _progressBarValue.DOFillAmount(value, duration)

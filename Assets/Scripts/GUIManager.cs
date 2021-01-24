@@ -109,7 +109,7 @@ public class GUIManager : Singleton<GUIManager>
     public void ResetAndHideIntro()
     {
         _introPlayableDirector.Pause();
-        _introPlayableDirector.time = -1.5f;
+        _introPlayableDirector.time = 0;
         _introPlayableDirector.gameObject.SetActive(false);
     }
 
@@ -165,7 +165,7 @@ public class GUIManager : Singleton<GUIManager>
     [ContextMenu("ResetIntro")]
     public void ResetIntroMenuEditor()
     {
-        _introPlayableDirector.time = -1.5f;
+        _introPlayableDirector.time = 0;
     }
 
     [ContextMenu("ResumeIntro")]

@@ -150,9 +150,9 @@ namespace CoreGame
 
         private void OnDeath()
         {
-            FxExplode fx = SpawnManager.GetPoolObject("Explode") as FxExplode;
+            ObjectToPool fx = SpawnManager.GetPoolObject("Explode");
             fx.transform.position = Position;
-            fx.SelfDespawnAfter(1);
+            fx.StartSelfDespawnAfter(1);
             SpawnManager.EnemyPools[SpawnData.PrefabIndex].Release(this);
             // Todo add death animation
         }

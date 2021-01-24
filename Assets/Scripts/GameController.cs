@@ -81,11 +81,16 @@ public class GameController : Singleton<GameController>
     protected override void Awake()
     {
         base.Awake();
+        ResetLevelPosition();
         GameCamera.gameObject.SetActive(false);
     }
 
     private void ReOrderLevelInterval()
     {
+        if (IsPause)
+        {
+            return;
+        }
         //Debug.Log("ReOrderLevelInterval" + _levelIndex);
         Vector3 LevelPos = _levels[_levelIndex].position;
         _levelIndex++;
@@ -100,12 +105,11 @@ public class GameController : Singleton<GameController>
     public void PlayGame()
     {
         GameCamera.gameObject.SetActive(true);
-        
-        ResetLevelPosition();
         float delay = LevelGap / (_playerSpeed * 2);
         float reOrderPeriod = LevelGap / _playerSpeed;
         InvokeRepeating("ReOrderLevelInterval", delay, reOrderPeriod);
         SpawnManager.StartGame();
+        Player.Setup();
         IsPause = false;
     }
 
@@ -123,17 +127,18 @@ public class GameController : Singleton<GameController>
     {
         IsPause = true;
         GUIManager.Instance.GameOver();
-        CancelInvoke();
+        CancelInvoke("ReOrderLevelInterval");
     }
 
     public void ResetLevelPosition()
     {
+        _levelIndex = 0;
         for (int i = 0; i < _levels.Length; i++)
         {
             _levels[i].position = _levelStartPosition + i * new Vector3(0, 0, LevelGap);
             _levels[i].gameObject.SetActive(true);
         }
-        Player.Setup(_startPlayerPosition);
+        Player.ResetPlayerPosition(_startPlayerPosition);
     }
 }
 

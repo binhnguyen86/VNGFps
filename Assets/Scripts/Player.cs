@@ -14,8 +14,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     private CharacterController _controller;
 
+    [SerializeField]
+    private Transform _modelHolder;
+
     [SerializeField] 
     private Transform _bodyCamTransform;
+
+    [SerializeField]
+    private Animator _anim;
 
     [SerializeField]
     private bool _isImmortal;
@@ -84,20 +90,19 @@ public class Player : MonoBehaviour
         {ActionState.Death, "death"}
     };
 
-    private Animator _anim;
 
-    private void Start()
+    public void Setup()
     {
-        _anim = GetComponent<Animator>();
-    }
-
-    public void Setup(Vector3 position)
-    {
-        transform.localRotation = new Quaternion(0,0,0,0);
-        _bodyCamTransform.localRotation = new Quaternion(0, 0, 0, 0);
-        transform.position = position;
         _weapon.SetupWeapon();
         CurrentState = ActionState.Run;
+    }
+
+    public void ResetPlayerPosition(Vector3 position)
+    {
+        transform.localRotation = new Quaternion(0, 0, 0, 0);
+        _bodyCamTransform.localRotation = new Quaternion(0, 0, 0, 0);
+        _modelHolder.localRotation = new Quaternion(0, 0, 0, 0);
+        transform.position = position;
     }
 
     public Bullet Shoot(Vector3 target)
