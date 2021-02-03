@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.6985294, g: 0.6317583, b: 0.49821582, a: 1}
   m_AmbientIntensity: 2.39
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -3251,7 +3251,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1245198485, guid: ea3698cd5c7516143982f4e34e1c7625, type: 3}
       propertyPath: _isImmortal
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1612711904410486055, guid: ea3698cd5c7516143982f4e34e1c7625,
         type: 3}
